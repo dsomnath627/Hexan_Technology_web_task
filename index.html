@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login & Registration</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section style="padding: 10px;">
+        <div class="container">
+            <div class="container">
+                <div class="form-container" id="login-container">
+                    <form id="login-form" action="login.php" method="POST">
+                        <h2>Login</h2>
+                        <input type="email" id="login-email" name="email" placeholder="Email" required>
+                        <input type="password" id="login-password" name="password" placeholder="Password" required>
+                        <section>
+
+                            <div class="captcha-container">
+                                <div id="captcha" class="captcha-image"></div>
+                                <input type="text" id="captcha-input" class="captcha-input" placeholder="Enter CAPTCHA"> 
+                                <div id="captcha-message"></div>
+                            </div>
+                        </section>
+                        <button onclick="validateCaptcha()" type="submit">Login</button>
+                        <p>Don't have an account? <a href="register.html" id="show-register">Register</a></p>
+                    </form>
+                </div>
+            </div>
+            
+
+            <div class="form-container" id="register-container">
+
+                <form id="register-form" action="connect.php" method="post">
+                    <h2>Register</h2>
+                    <input type="text" id="firstName" placeholder="First Name" name="firstName" required />
+                    <input type="text" id="lastName" placeholder="Last Name" name="lastName" required />
+                    <input type="email" id="email" placeholder="Email" name="email" required />
+                    <input type="password" id="password" placeholder="Password" name="password" required />
+                    <input type="number" id="number" placeholder="Number" name="number" required />
+                    <button type="submit">Register</button>
+                    <p>Already have an account? <a href="#" id="show-login">Login</a></p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
+
+
+
+<!-- <section>
+
+    <div class="captcha-container">
+        <div id="captcha" class="captcha-image"></div>
+        <input type="text" id="captcha-input" class="captcha-input" placeholder="Enter CAPTCHA">
+        <button onclick="validateCaptcha()">Submit</button> 
+        <div id="captcha-message"></div>
+    </div>
+</section>
+<button onclick="validateCaptcha()" type="submit">Login</button> -->
